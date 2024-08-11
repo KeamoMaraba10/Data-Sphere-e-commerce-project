@@ -5,6 +5,7 @@
     --lightBrown:#575048;
     --green:#796F3C;
     --supportingFont: Montserrat;
+    --logoFont: Lobster;
 }
 
 *{
@@ -14,6 +15,96 @@
     margin: 0;
 }
 
+.navbar{
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
 body{
     background-color: var(--white);
+}
+
+.logo-img{
+    width: 3.75rem;
+}
+
+.logo-txt{
+    font-family: var(--logoFont);
+    color: var(--yellow);
+    font-size: 2rem;
+}
+
+.nav-pill-list{
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-pill-list a{
+    text-decoration: none;
+    color: var(--lightBrown);
+    margin: 0 .5rem;
+}
+
+footer{
+    background-color: var(--green);
+    color: var(--lightBrown);
+    padding: 2rem;
+}
+
+footer a{
+    color: var(--lightBrown);
+    text-decoration: none;
+}
+
+.links{
+    display: flex;
+}
+
+.footer-logo{
+    margin-bottom: 2rem;
+}
+
+.box1-link{
+    margin: 2rem 0;
+}
+
+.socials{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
+}
+
+.box2 a{
+    margin: .7rem 0;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+}
+
+#email{
+    width: 45rem;
+    height: 2rem;
+    margin-top: .5rem;
+}
+
+.contact-support{
+    margin-top: 2rem;
+    width: 25rem;
+    height: 1.8rem;
+    background-color: var(--yellow);
+    color: #fff;
+    border: none;
 }

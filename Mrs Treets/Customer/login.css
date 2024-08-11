@@ -1,0 +1,17 @@
+.form-content{
+    justify-content: center;
+}
+
+.login-picture{
+    background-image: url("flippin\ burgers.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.copywrite{
+    width: 9.5rem;
+    font-size: 1.20rem;
+    position: absolute;
+    bottom: 30%;
+}
+

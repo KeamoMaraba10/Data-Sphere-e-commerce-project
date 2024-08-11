@@ -1,0 +1,155 @@
+.navbar{
+    justify-content: space-between;
+}
+
+.sign-in-btn, .register-btn{
+    width: 4.5rem;
+    height: 1.7rem;
+    border-radius: .5rem;
+}
+
+.sign-in-btn{
+    border: none;
+    color: #fff;
+    background-color: var(--yellow);
+}
+
+.register-btn{
+    border: 1px solid var(--green);
+    color: var(--green);
+    background-color: var(--white);
+}
+
+main{
+    height: 200vh;
+    padding: 0 1rem;
+}
+
+.search-boxes{
+    display: flex;
+    color: var(--lightBrown);
+    padding: 5rem 0;
+}
+
+.search-box-1, .search-box-2{
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    height: 2rem;
+    background-color: #fff;
+    margin-right: 5rem;
+    padding: 1.5rem;
+}
+
+.search-boxes input{
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+.search-boxes i{
+    margin-left: 1rem;
+}
+
+.filters{
+    display: flex;
+}
+
+.filter-btn{
+    margin-right: 1rem;
+    color: var(--green);
+    border: 1px solid var(--green);
+    background-color: transparent;
+    width: 4.5rem;
+    font-size: 0.88rem;
+    padding: 0.50rem;
+}
+
+.active{
+    color: #fff;
+    background-color: var(--green);
+}  
+
+
+.dropbtn {
+  background-color: var(--green);
+  color: white;
+  padding: 0.50rem;
+  width: 6rem;
+  font-size: .88rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: var(--lightBrown);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 4rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--lightBrown);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.icon-filters{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 10rem;
+}
+
+.filter-icon img{
+    width: 6rem;
+}
+
+.icon-text{
+    text-align: center;
+}
+
+.restaurants-container{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+}
+
+.restaurant{
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: .1rem solid var(--lightBrown);
+}
+
+.discount{
+    position: absolute;
+    color: #fff;
+    /* padding: 3rem .5rem; */
+    background: red;
+    border-radius: .2rem;
+    left: 0;
+    top: 7.5%;
+    z-index: 2;
+}
