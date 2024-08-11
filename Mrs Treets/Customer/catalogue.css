@@ -21,7 +21,7 @@
 }
 
 main{
-    height: 200vh;
+
     padding: 0 1rem;
 }
 
@@ -128,6 +128,10 @@ main{
     text-align: center;
 }
 
+.inventory{
+    padding: 0 7rem;
+}
+
 .restaurants-container{
     margin-top: 5rem;
     display: grid;
@@ -137,19 +141,79 @@ main{
 
 .restaurant{
     position: relative;
-    width: 100%;
-    padding: 1rem;
-    border-radius: .5rem;
-    border: .1rem solid var(--lightBrown);
+    width: 21rem;
+    border-radius: .1rem;
+    border: 1px solid var(--lightBrown);
+    overflow: hidden;
 }
 
 .discount{
     position: absolute;
     color: #fff;
-    /* padding: 3rem .5rem; */
     background: red;
     border-radius: .2rem;
     left: 0;
     top: 7.5%;
     z-index: 2;
+}
+
+.restaurant-thumbnail{
+    position: relative;
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+    border-radius: .1rem;
+}
+
+.restaurant-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: .25rem; */
+    transition: transform .5s ease-in-out;
+}
+
+.restaurant:hover .restaurant-img{
+    transform: scale(1.1);
+}
+
+.restaurant:hover .restaurant-img{
+transform: scale(1.1);
+}
+
+.restaurant-body{
+    margin: 2rem 1rem;
+    position: relative;
+}
+
+.restaurant-name{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+.menu{
+    width: 80%;
+    opacity: .75;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.place{
+    font-weight: 600;
+    text-transform: capitalize;
+    }
+    .rating{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: .4rem .6rem;
+    background: var(--yellow);
+    color: #fff;
+    font-size: .9rem;
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
