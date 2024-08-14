@@ -1,3 +1,8 @@
+main, .navbar{
+    padding: 1.188rem 3.188rem;
+}
+
+
 .navbar{
     justify-content: space-between;
 }
@@ -20,10 +25,7 @@
     background-color: var(--white);
 }
 
-main{
 
-    padding: 0 1rem;
-}
 
 .search-boxes{
     display: flex;
@@ -34,11 +36,12 @@ main{
 .search-box-1, .search-box-2{
     display: flex;
     align-items: center;
-    width: 20rem;
-    height: 2rem;
+    width: 34.38rem;
+    height: 3.75rem;
     background-color: #fff;
-    margin-right: 5rem;
+    margin-right: 12rem;
     padding: 1.5rem;
+    border-radius: 1.25rem;
 }
 
 .search-boxes input{
@@ -53,26 +56,29 @@ main{
 
 .filters{
     display: flex;
+    margin-left: 3.188rem;
+    /* margin-right: 3.188rem; */
 }
 
 .filter-btn{
     margin-right: 1rem;
-    color: var(--green);
-    border: 1px solid var(--green);
+    color: var(--yellow) ;
+    border: 1px solid var(--yellow);
     background-color: transparent;
     width: 4.5rem;
     font-size: 0.88rem;
     padding: 0.50rem;
+    border-radius: 0.50rem;
 }
 
 .active{
     color: #fff;
-    background-color: var(--green);
+    background-color: var(--yellow);
 }  
 
 
 .dropbtn {
-  background-color: var(--green);
+  background-color: var(--yellow);
   color: white;
   padding: 0.50rem;
   width: 6rem;
@@ -80,16 +86,17 @@ main{
   font-weight: 500;
   border: none;
   cursor: pointer;
+  border-radius: 0.50rem;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-  background-color: var(--lightBrown);
+.dropbtn:hover {
+  background-color: #f5b23eb0;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-left: 4rem;
+  margin-left: 6rem;
 }
 
 .dropdown-content {
@@ -117,11 +124,12 @@ main{
     margin-top: 5rem;
     display: flex;
     justify-content: space-evenly;
-    padding: 0 10rem;
+    align-items: center;
+    padding: 0 20rem;
 }
 
 .filter-icon img{
-    width: 6rem;
+    width: 4rem;
 }
 
 .icon-text{
@@ -142,19 +150,23 @@ main{
 .restaurant{
     position: relative;
     width: 21rem;
-    border-radius: .1rem;
-    border: 1px solid var(--lightBrown);
+    border-radius: .50rem;
+    border: none;
     overflow: hidden;
+    background-color: #fff;
+    filter: drop-shadow(4px 10px 4px #00000031);
 }
 
 .discount{
     position: absolute;
     color: #fff;
-    background: red;
+    background: var(--green);
     border-radius: .2rem;
+    padding: .2rem;
     left: 0;
     top: 7.5%;
     z-index: 2;
+    font-size: 0.6rem;
 }
 
 .restaurant-thumbnail{
@@ -169,7 +181,6 @@ main{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* border-radius: .25rem; */
     transition: transform .5s ease-in-out;
 }
 
@@ -182,35 +193,41 @@ transform: scale(1.1);
 }
 
 .restaurant-body{
-    margin: 2rem 1rem;
+    margin: 1rem 1rem;
     position: relative;
+    color: var(--lightBrown);
 }
 
 .restaurant-name{
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
     margin: 1rem 0;
+
 }
 .menu{
     width: 80%;
-    opacity: .75;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-size: 0.88rem;
+    font-weight: 500;
 }
 
 .place{
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 0.81rem;
     text-transform: capitalize;
-    }
-    .rating{
+    color: #757575;
+}
+
+.rating{
     position: absolute;
     right: 0;
     top: 0;
     padding: .4rem .6rem;
-    background: var(--yellow);
-    color: #fff;
+    color: var(--yellow);
+    
     font-size: .9rem;
     font-size: .9rem;
     display: flex;

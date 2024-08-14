@@ -17,7 +17,7 @@
 
 .navbar{
     display: flex;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     align-items: center;
 }
 
@@ -43,6 +43,7 @@ body{
 .nav-pill-list{
     list-style-type: none;
     display: flex;
+    align-items: center;
 }
 
 .nav-pill-list a{
@@ -52,6 +53,7 @@ body{
 }
 
 footer{
+    margin-top: 10rem;
     background-color: var(--green);
     color: var(--lightBrown);
     padding: 2rem;
