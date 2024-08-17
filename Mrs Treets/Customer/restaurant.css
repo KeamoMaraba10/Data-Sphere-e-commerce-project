@@ -1,0 +1,197 @@
+main, .navbar{
+    padding: 1.188rem 3.188rem;
+}
+
+
+.navbar{
+    justify-content: space-between;
+}
+
+main{
+    color: var(--lightBrown);
+}
+
+.restaurant-header{
+    display: flex;
+    margin-top: 3rem;
+}
+
+.restaurant-info{
+    margin-left: 3.25rem;
+}
+
+.restaurant-image{
+    width: 37.50rem;
+    height: 35rem;
+    background-image: url("IMG_9323.jpg");
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.restaurant-description{
+    font-size: 1rem;
+    margin-top: 2.375rem;
+    width: 38.75rem;
+    font-weight: 300;
+}
+
+.restaurant-name{
+    font-size: 3.00rem;
+}
+
+.rating{
+    color: var(--yellow);
+    margin-top: 7.063rem;
+}
+
+.reviews{
+    color: var(--lightBrown);
+    font-weight: 300;
+}
+
+.menu{
+    margin-top: 4.75rem;
+}
+
+.category-name{
+    width: 17.81rem;
+    height: 2.88rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--yellow);
+    color: #fff;
+    border-radius: .5rem;
+}
+
+.menu-items{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    margin-top: 3rem;
+}
+
+.item{
+    width: 27.50rem;
+    height: 12.94rem;
+    background-color: #fff;
+    margin-right: 3.438rem;
+    padding: 1.5rem;
+    padding-left: 5rem;
+}
+
+.item-name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price{
+    font-weight: 500;
+}
+
+.item-description{
+    width: 21.00rem;
+    height: 4.13rem;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+}
+
+.btn-add-item{
+    width: 2.56rem;
+    height: 2.50rem;
+    background-color: var(--yellow);
+    color: var(--lightBrown);
+    border-radius: 50%;
+    border: none;
+}
+
+.add-to-cart{
+    display: none;
+    border: 1px solid var(--yellow);
+    width: 37.50rem;
+    height: 16.19rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: right;
+}
+
+.add-to-cart .item-description{
+    height: 2rem;
+    text-align: initial;
+}
+
+.order-modification{
+    display: flex;
+    justify-content: space-between;
+}
+
+#notes{
+    border: 1px solid var(--yellow);
+    border-radius: .5rem;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.subtract{
+    color: #fff;
+    background-color: var(--yellow);
+    border: none;
+    width: 2.19rem; 
+    height: 2.25rem; 
+    border-radius: 3.13rem; 
+    border-width: 0.06rem; 
+    padding-top: 0.63rem; 
+    padding-bottom: 0.63rem; 
+    padding-left: 0.88rem; 
+    padding-right: 0.88rem; 
+}
+
+.number{
+    width: 3.38rem; 
+    height: 3.50rem; 
+    border-radius: 3.13rem; 
+    border-width: 0.06rem; 
+    padding-top: 1.25rem; 
+    padding-bottom: 1.25rem; 
+    padding-left: 1.50rem; 
+    padding-right: 1.50rem;
+    background-color: var(--yellow);
+    margin: 0 .5rem;
+}
+
+.add{
+    color: #fff;
+    background-color: var(--yellow);
+    border: none;
+    width: 2.19rem; 
+    height: 2.25rem; 
+    border-radius: 3.13rem; 
+    border-width: 0.06rem; 
+    padding-top: 0.63rem; 
+    padding-bottom: 0.63rem; 
+    padding-left: 0.88rem; 
+    padding-right: 0.88rem;
+}
+
+.btn-add-to-order{
+    color: #fff;
+    background-color: var(--yellow);
+    margin-top: 1rem;
+    font-size: 1.00rem;  
+    width: 11.25rem; 
+    height: 2.50rem;
+    border: none; 
+    border-radius: 0.50rem;   
+    padding-top: 0.75rem; 
+    padding-bottom: 0.75rem; 
+    padding-left: 0.75rem; 
+    padding-right: 0.75rem;
+}
