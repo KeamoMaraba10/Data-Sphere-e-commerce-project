@@ -29,11 +29,20 @@
             <li><a href="#" target="_blank" rel="noopener noreferrer">Home</a></li>
             <li><a href="#" target="_blank" rel="noopener noreferrer">FAQs</a></li>
             <li><a href="#" target="_blank" rel="noopener noreferrer">Contact</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer"><img src="User.svg" alt="" srcset=""
-                        width="17px"></a></li>
+            <li><i class="fa-solid fa-cart-shopping"></i></li>
+            <li><img class="user" src="User.svg" alt="" srcset=""width="17px"></li>
         </ul>
     </nav>
+    <div class="cart">
+        <h2 class="restaurant-title">Iron Cast <span class="close-cart"><img src="X circle.svg" alt="" srcset=""></span></h2>
+        <div class="cart-quantity">
+            <p class="cart-quantity">1 item</p>
+            <p class="cart-subtotal-p">Subtotal:290.80</p>
+        </div>
+        <ul class="cart-list"></ul>
+        <h4 class="cart-quantity-h4"></h4>
+        <button class="checkout">Go to checkout</button>
+    </div>
     <!-- Header ends -->
 
     <main>
@@ -53,8 +62,8 @@
         </div>
         <div class="menu">
             <div class="add-to-cart">
-                <h4 class="item-name">Chips & Russian</h4>
-                <p class="item-description">Russian Roll and Chips</p>
+                <h4 class="item-name" id="item-name"></h4>
+                <p class="item-description" id="item-description"></p>
                 <div class="order-modification">
                     <textarea name="notes" id="notes"></textarea>
                     <div class="quantity">
@@ -71,17 +80,21 @@
                     <div class="row">
                         <div class="item">
                             <h4 class="item-name">Chips & Russian</h4>
-                            <p class="item-description">Russian Roll and Chips</p>
+                            <p class="item-description">Russian Roll and Chips
+                            </p>
+                            <p class="price">R60</p>
                             <button class="btn-add-item">+</button>
                         </div>
                         <div class="item">
-                            <h4 class="item-name">Combo 1 <span class="price">R60</span></h4>
+                            <h4 class="item-name">Combo 1</h4>
                             <p class="item-description"></p>
+                            <p class="price">R60</p>
                             <button class="btn-add-item">+</button>
                         </div>
                         <div class="item">
                             <h4 class="item-name">Chips & Russian</h4>
                             <p class="item-description"></p>
+                            <p class="price">R60</p>
                             <button class="btn-add-item">+</button>
                         </div>
                     </div>
@@ -89,16 +102,19 @@
                         <div class="item">
                             <h4 class="item-name">Chips & Russian</h4>
                             <p class="item-description"></p>
+                            <p class="price">R60</p>
                             <button class="btn-add-item">+</button>
                         </div>
                         <div class="item">
                             <h4 class="item-name">Chips & Russian</h4>
                             <p class="item-description"></p>
+                            <p class="price">R60</p>
                             <button class="btn-add-item">+</button>
                         </div>
                         <div class="item">
                             <h4 class="item-name">Chips & Russian</h4>
                             <p class="item-description"></p>
+                            <p class="price">R60</p>
                             <button class="btn-add-item">+</button>
                         </div>
                     </div>
@@ -137,6 +153,91 @@
         </div>
         <button class="contact-support">Contact Support</button>
     </footer>
+    <script>
+        //when plus button is pressed the following need to happen
+        //Item description and item name need to be captured
+        //Then add-to-cart/modalview gets displayed
+        //Then if any element in window is pressed is must be removed
+        var itemName = "";
+        var itemDescription = "";
+
+        var modalView = document.getElementsByClassName("add-to-cart")[0];
+        var addToCartItemName = document.getElementById("item-name");
+        var addToCartItemDescription = document.getElementById("item-description");
+
+        //elements inside the add to cart
+        var subtract = document.getElementsByClassName("subtract")[0];
+        var number = document.getElementsByClassName("number")[0];
+        var add = document.getElementsByClassName("add")[0];
+        var notes = document.getElementById("notes");
+        
+
+
+        var pressedBtn;
+        addBtn = document.querySelectorAll(".btn-add-item");
+        addBtn.forEach(element =>{
+         element.addEventListener("click", function getInfo(){
+            itemDescription = this.previousElementSibling.previousElementSibling.innerText
+            itemName = this.previousElementSibling.previousElementSibling.previousElementSibling.innerText
+            addToCartItemName.innerText = itemName
+            addToCartItemDescription.innerText = itemDescription
+            centerModal();
+            modalView.classList.add("active");
+            pressedBtn = element
+         })
+        });
+
+        
+        window.onclick = function(event){
+            if((modalView.classList[1] === "active") && (event.target != pressedBtn)){
+                console.log("it spans")
+                if ((event.target != modalView) && (event.target != modalView.children[0])
+                    && (event.target != modalView.children[1]) && (event.target != modalView.children[2])
+                    && (event.target != notes) && (event.target != subtract) 
+                    && (event.target != number) && (event.target != add) 
+                    && (event.target != modalView.children[3])){
+                    console.log(event.target)
+                    modalView.classList.remove("active")
+            }
+            }    
+        }
+
+        //center modal
+        function centerModal() {
+            var modalContent = document.querySelector('.add-to-cart');
+            var viewportHeight = window.innerHeight;
+            var viewportWidth = window.innerWidth;
+            
+            var modalHeight = modalContent.offsetHeight;
+            var modalWidth = modalContent.offsetWidth;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+            // Calculate top and left offsets based on scroll position
+            var top = scrollTop + (viewportHeight - modalHeight) / 2;
+            var left = scrollLeft + (viewportWidth - modalWidth) / 2;
+
+            // Apply the calculated offsets
+            modalContent.style.top = top + 'px';
+            modalContent.style.left = left + 'px';
+        }
+
+        //cart operations
+
+        //open cart
+        const shoppingCart = document.querySelector(".cart");
+        const cartIcon = document.querySelector(".fa-cart-shopping");
+
+        cartIcon.addEventListener("click", () =>{
+            shoppingCart.classList.add("active-cart");
+        })
+
+        //close shopping cart
+        const closeCart = document.querySelector(".close-cart");
+        closeCart.addEventListener("click", ()=>{
+            shoppingCart.classList.remove("active-cart")
+        })
+    </script>
 
 </body>
 

@@ -7,8 +7,52 @@ main, .navbar{
     justify-content: space-between;
 }
 
+.fa-cart-shopping,.user{
+    margin: 0 0.5rem;
+}
+
+.cart{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100vh;
+    width: 31.25rem;
+    transition: ease-in-out;
+    background-color: var(--white);
+    color: var(--lightBrown);
+    z-index: 1;
+    border-left: 1px solid var(--lightBrown);
+    /* box-shadow: -5px 0px 0px 0px rgba(0,0,0,0.25); */
+}
+
+.restaurant-title{
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-cart{
+    display: flex;
+}
+
+.close-cart img{
+    width: 2rem;
+}
+
+.cart-quantity{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--lightBrown);
+}
+
+.active-cart{
+    left: calc(100% - 31.25rem);
+}
+
 main{
     color: var(--lightBrown);
+    /* opacity: 0.4; */
 }
 
 .restaurant-header{
@@ -79,24 +123,27 @@ main{
     margin-right: 3.438rem;
     padding: 1.5rem;
     padding-left: 5rem;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0px 4px 4px #0000004c);
 }
 
 .item-name{
     font-size: 1.5rem;
     font-weight: 600;
-    display: flex;
     justify-content: space-between;
 }
 
-.price{
-    font-weight: 500;
-}
+
 
 .item-description{
     width: 21.00rem;
-    height: 4.13rem;
+    height: 2rem;
     margin-bottom: 1rem;
     margin-top: .5rem;
+}
+
+.price{
+    padding: .5rem 0;
 }
 
 .btn-add-item{
@@ -117,6 +164,21 @@ main{
     border-radius: .5rem;
     padding: 2rem;
     text-align: right;
+    /* justify-content: center;
+    align-items: center; */
+    position: absolute;
+    z-index: 2;
+    /* right: 30%; */
+    /* top: 80%; */
+
+}
+
+.active{
+    display: initial;
+}
+
+.add-to-cart .item-name{
+    text-align: initial;
 }
 
 .add-to-cart .item-description{
