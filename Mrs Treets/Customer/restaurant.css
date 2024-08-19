@@ -22,7 +22,7 @@ main, .navbar{
     color: var(--lightBrown);
     z-index: 1;
     border-left: 1px solid var(--lightBrown);
-    /* box-shadow: -5px 0px 0px 0px rgba(0,0,0,0.25); */
+    padding: 1rem 1.5rem;
 }
 
 .restaurant-title{
@@ -30,6 +30,7 @@ main, .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 .close-cart{
@@ -43,7 +44,99 @@ main, .navbar{
 .cart-quantity{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 1rem;
     border-bottom: 1px solid var(--lightBrown);
+    margin-bottom: 1rem;
+}
+
+.cart-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 27.50rem;
+    height: 11rem;
+    background-color: #fff;
+    margin-right: 3.438rem;
+    padding: 1.5rem;
+    padding-left: 5rem;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0px 4px 4px #0000004c);
+}
+
+.cart-item-name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.delete{
+    width: 1.5rem;
+}
+
+.quantity-buttons{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.cart-subtract{
+    color: #fff;
+    background-color: var(--yellow);
+    border: none;
+    width: 1.25rem; 
+    height: 1.25rem; 
+    border-radius: 50%; 
+}
+
+.cart-number{
+    width: 2rem; 
+    height: 2rem; 
+    border-radius: 50%; 
+    padding-top: .40rem; 
+    background-color: var(--yellow);
+    margin: 0 .5rem;
+    text-align: center;
+}
+
+.cart-add{
+    color: #fff;
+    background-color: var(--yellow);
+    border: none;
+    width: 1.25rem; 
+    height: 1.25rem; 
+    border-radius: 50%;
+}
+
+.cart-quantity-h4{
+    position: absolute;
+    bottom:15%;
+    width: 27.50rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.subtotal-price-h4{
+
+}
+
+.checkout{
+    position: absolute;
+    bottom: 5%;
+    width: 28rem; 
+    height: 2.88rem; 
+    border-radius: 0.50rem; 
+    border-width: 0.06rem;  
+    padding-top: 0.75rem; 
+    padding-bottom: 0.75rem; 
+    padding-left: 1.00rem; 
+    padding-right: 1.00rem;
+    background-color: var(--yellow);
+    color: #fff;
+    border: none;
 }
 
 .active-cart{
