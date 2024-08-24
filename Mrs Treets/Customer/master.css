@@ -18,6 +18,12 @@
 .navbar{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 1.188rem 3.188rem;
+}
+
+.fa-cart-shopping,.user{
+    margin: 0 0.5rem;
 }
 
 .logo{

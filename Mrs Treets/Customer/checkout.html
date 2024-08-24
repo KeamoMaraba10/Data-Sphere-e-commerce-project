@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img class="logo-img" src="Aunt J.svg" alt="" srcset="">
+            <h2 class="logo-txt">MrS Treets</h2>
+        </div>
+        <ul class="nav-pill-list">
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Home</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">FAQs</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Contact</a></li>
+            <li><img class="user" src="User.svg" alt="" srcset=""width="17px"></li>
+        </ul>
+    </nav>
+    <!-- Header ends -->
+     <main>
+        <h1>Order info - </h1>
+        <div class="checkout-list">
+            <div class="checkout-item">
+                <h4 class="cart-item-name">Chips & Russian <img src="Trash 2.svg" alt="" class="delete"></h4>
+                
+                <p class="price">R60</p>
+                <div class="quantity-buttons">
+                    <button class="cart-subtract">-</button>
+                    <p class="cart-number">1</p>
+                    <button class="cart-add">+</button>
+                </div>
+            </div>
+
+            <input type="text" name="coupon" id="coupon">
+            <button class="coupon-btn">Apply coupon</button>
+        </div>
+
+        <h4 class="subtotal">Subtotal <span class="subtotal-price">R280.90</span></h4>
+        <h4 class="shipping-fee">Shipping Fee <span class="shipping-fee-price">R0</span></h4>
+        <h2 class="total">Total <span class="total-price">R280.90</span></h2>
+        <button class="order">Order</button>
+     </main>
+</body>
+</html>

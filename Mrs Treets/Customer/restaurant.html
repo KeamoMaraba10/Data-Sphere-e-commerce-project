@@ -55,6 +55,23 @@
         <h4 class="cart-quantity-h4">Subtotal <span class="subtotal-price-h4">R290.80</span></h4>
         <button class="checkout">Go to checkout</button>
     </div>
+    <div class="profile-nav">
+            <div class="account-details">
+                <img src="User-placeholder.svg" alt="" class="user-placeholder-img">
+                <div class="manage-account">
+                    <h2 class="user-name">Mista</h2>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Manage account</a>
+                </div>
+
+                <img src="X circle.svg" alt="" class="close-profile">
+            </div>
+            <ul class="profile-nav-links">
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Orders <img src="Shopping bag.svg" alt="" srcset=""></a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Promotions <img src="Credit card.svg" alt=""></a></li>
+                <li><a href="#" target="_blank" rel="noopener noreferrer">Help <img src="Message square.svg" alt=""></a></li>
+            </ul>
+            <a href="#" class="sign-out">Sign out</a>
+    </div>
     <!-- Header ends -->
 
     <main>
@@ -73,18 +90,20 @@
             </div>
         </div>
         <div class="menu">
-            <div class="add-to-cart">
-                <h4 class="item-name" id="item-name"></h4>
-                <p class="item-description" id="item-description"></p>
-                <div class="order-modification">
-                    <textarea name="notes" id="notes"></textarea>
-                    <div class="quantity">
-                        <button class="subtract">-</button>
-                        <p class="number">1</p>
-                        <button class="add">+</button>
+            <div class="modal">
+                <div class="add-to-cart">
+                    <h4 class="item-name" id="item-name">Combo 1</h4>
+                    <p class="item-description" id="item-description">Wors and Chips</p>
+                    <div class="order-modification">
+                        <textarea name="notes" id="notes"></textarea>
+                        <div class="quantity">
+                            <button class="subtract">-</button>
+                            <p class="number">1</p>
+                            <button class="add">+</button>
+                        </div>
                     </div>
+                    <button class="btn-add-to-order">Add to cart</button>
                 </div>
-                <button class="btn-add-to-order">Add to cart</button>
             </div>
             <div class="menu-category">
                 <p class="category-name">Chips and Russian</p>
@@ -168,12 +187,13 @@
     <script>
         //when plus button is pressed the following need to happen
         //Item description and item name need to be captured
-        //Then add-to-cart/modalview gets displayed
+        //Then add-to-cart/modalContent gets displayed
         //Then if any element in window is pressed is must be removed
         var itemName = "";
         var itemDescription = "";
 
-        var modalView = document.getElementsByClassName("add-to-cart")[0];
+        var modalContent = document.getElementsByClassName("add-to-cart")[0];
+        var modalView = document.querySelector(".modal");
         var addToCartItemName = document.getElementById("item-name");
         var addToCartItemDescription = document.getElementById("item-description");
 
@@ -182,7 +202,7 @@
         var number = document.getElementsByClassName("number")[0];
         var add = document.getElementsByClassName("add")[0];
         var notes = document.getElementById("notes");
-        
+        var all = document.querySelector("*");
 
 
         var pressedBtn;
@@ -193,46 +213,28 @@
             itemName = this.previousElementSibling.previousElementSibling.previousElementSibling.innerText
             addToCartItemName.innerText = itemName
             addToCartItemDescription.innerText = itemDescription
-            centerModal();
-            modalView.classList.add("active");
+            modalView.classList.add("modal-active");
+            all.style.overflow = "hidden"
             pressedBtn = element
          })
         });
 
         
         window.onclick = function(event){
-            if((modalView.classList[1] === "active") && (event.target != pressedBtn)){
+            if((modalView.classList[1] === "modal-active") && (event.target != pressedBtn)){
                 console.log("it spans")
-                if ((event.target != modalView) && (event.target != modalView.children[0])
-                    && (event.target != modalView.children[1]) && (event.target != modalView.children[2])
+                if ((event.target != modalContent) && (event.target != modalContent.children[0])
+                    && (event.target != modalContent.children[1]) && (event.target != modalContent.children[2])
                     && (event.target != notes) && (event.target != subtract) 
                     && (event.target != number) && (event.target != add) 
-                    && (event.target != modalView.children[3])){
-                    console.log(event.target)
-                    modalView.classList.remove("active")
+                    && (event.target != modalContent.children[3])){
+                    modalView.classList.remove("modal-active")
+                    all.style.overflow = "initial"
             }
             }    
         }
 
-        //center modal
-        function centerModal() {
-            var modalContent = document.querySelector('.add-to-cart');
-            var viewportHeight = window.innerHeight;
-            var viewportWidth = window.innerWidth;
-            
-            var modalHeight = modalContent.offsetHeight;
-            var modalWidth = modalContent.offsetWidth;
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-            // Calculate top and left offsets based on scroll position
-            var top = scrollTop + (viewportHeight - modalHeight) / 2;
-            var left = scrollLeft + (viewportWidth - modalWidth) / 2;
-
-            // Apply the calculated offsets
-            modalContent.style.top = top + 'px';
-            modalContent.style.left = left + 'px';
-        }
+    
 
         //cart operations
 
@@ -249,6 +251,23 @@
         closeCart.addEventListener("click", ()=>{
             shoppingCart.classList.remove("active-cart")
         })
+
+        //profile operations
+
+        //open profile
+        const profileNav = document.querySelector(".profile-nav");
+        const profileIcon = document.querySelector(".user");
+
+        profileIcon.addEventListener("click", () =>{
+            profileNav.classList.add("active-profile");
+        })
+
+        //close profile
+        const closeProfile = document.querySelector(".close-profile");
+        closeProfile.addEventListener("click", ()=>{
+            profileNav.classList.remove("active-profile")
+        })
+
     </script>
 
 </body>
