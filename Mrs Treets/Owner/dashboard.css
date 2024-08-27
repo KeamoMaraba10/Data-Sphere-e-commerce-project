@@ -104,6 +104,8 @@ main{
 
 .navbar{
     background-color: #fff;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
 }
 
 .sign-in-btn{
