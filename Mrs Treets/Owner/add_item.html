@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/Mrs Treets/Customer/master.css">
+    <link rel="stylesheet" href="business-login.css">
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
@@ -31,32 +32,30 @@
                 <h2 class="logo-txt">MrS Treets</h2>
             </div>
             <div class="reg-btns">
-                <button class="sign-in-btn">Sign in</button>
+                <button class="sign-in-btn">Sign out</button>
             </div>
         </nav>
         <div class="content">
-            <h1 class="heading">Restaurants</h1>
-            <div class="buttons">
-                <select  name="sort" id="sort">
-                    <option value="filter 1">Option 1</option>
-                    <option value="filter 1">Option 1</option>
-                    <option value="filter 1">Option 1</option>
-                </select>
-                <button class="add-restaurant">+</button>
-            </div>
-            <div class="restaurant-list">
-                <div class="restaurant">
-                    <div class="restaurant-img"></div>
-                    <div class="res-name">
-                        <h3 class="restaurant-name">Njabulo's Store</h3>
-                        <p class="address">56 Richmond Avenue</p>
-                    </div>
-                    <p class="orders">48</p>
-                    <p class="sales">R14, 983</p>
-                    <p class="operating-hours">Open</p>
+            <div class="form-content">
+                <div class="form">
+                    <h2 class="form-name">Add Menu Item</h2>
+                    <form action="">
+                        <div class="input-field">
+                            <label for="itemName">Item Name</label>
+                            <input type="text" name="itemName" id="itemName" placeholder="John Doe's Store" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="description">Description</label>
+                            <input type="text" name="description" id="description"placeholder="Boma something nice" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="price">Price</label>
+                            <input type="text" name="price" id="price"placeholder="R79.90" required>
+                        </div>
+                        <button class="next-btn" type="button">Add Item</button>
+                    </form>
                 </div>
             </div>
-
         </div>
     </main>
     

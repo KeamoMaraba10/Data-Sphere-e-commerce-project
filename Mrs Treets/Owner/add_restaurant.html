@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Mrs Treets/Customer/master.css">
+    <link rel="stylesheet" href="business-registration.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="side-bar-nav">
+        <ul class="side-pill-list">
+            <li class="pill-list-item"><a href="#"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+            <li class="pill-list-item"><a href="#"><i class="fa-solid fa-store"></i><span>Stores</span></a></li>
+            <li class="pill-list-item"><a href="#"><i class="fa-solid fa-utensils"></i><span>Menu</span></a></li>
+            <li class="pill-list-item"><a href="#"><i class="fa-solid fa-receipt"></i><span>Orders</span></a></li>
+        </ul>
+        <i class="fa-solid fa-gear"></i>
+    </div>
+    <main>
+        <nav class="navbar">
+            <div class="logo">
+                <img class="logo-img" src="/Mrs Treets/Customer/Aunt J.svg" alt="" srcset="">
+                <h2 class="logo-txt">MrS Treets</h2>
+            </div>
+            <div class="reg-btns">
+                <button class="sign-in-btn">Sign in</button>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="form-content">
+                <div class="form">
+                    <h2 class="form-name">Add a Restaurant</h2>
+                    <form action="">
+                        <div class="input-field single">
+                            <label for="address1">Address Line 1</label>
+                            <input type="text" name="address1" id="address1" placeholder="Eg. 145 Star Street" required>
+                        </div>
+                        <div class="input-field single">
+                            <label for="address2">Address Line 2</label>
+                            <input type="text" name="address2" id="address2" placeholder="Eg. Vosloorus Ext 31" required>
+                        </div>
+                        <div class="double-input">
+                            <div class="input-field">
+                                <label for="suburb">Suburb</label>
+                                <input type="text" name="suburb" id="suburb" placeholder="Boksburg" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="city">City</label>
+                                <input type="text" name="city" id="city" placeholder="Johannesburg" required>
+                            </div>
+                        </div>
+                        <div class="double-input">
+                            <div class="input-field">
+                                <label for="province">Province</label>
+                                <select name="province" id="province">
+                                    <option value="Gauteng">Gauteng</option>
+                                    <option value="Free State">Free State</option>
+                                    <option value="Limpopo">Limpopo</option>
+                                    <option value="Kwa-Zulu Natal">Kwa-Zulu Natal</option>
+                                    <option value="Eastern Cape">Eastern Cape</option>
+                                    <option value="Western Cape">Western Cape</option>
+                                    <option value="North West">North West</option>
+                                    <option value="Mpumalanga">Mpumalanga</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <label for="postal">Postal Code</label>
+                                <input type="text" name="postal" id="postal" placeholder="1467" required>
+                            </div>
+                        </div>
+                        <div class="input-field single">
+                            <label for="business">Business Name</label>
+                            <input type="text" name="business" id="business" required>
+                        </div>
+                        <div class="input-field single">
+                            <label for="image">Add Restaurant Hero</label>
+                            <input type="file" name="image" id="image">
+                        </div>
+                        <button class="next-btn" type="button">Add Restaurant</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

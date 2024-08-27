@@ -35,25 +35,23 @@
             </div>
         </nav>
         <div class="content">
-            <h1 class="heading">Restaurants</h1>
+            <select name="restaurant" id="restaurant" class="restaurant-select">
+                <option value="Njabulo Store">Njabulo Store</option>
+            </select>
             <div class="buttons">
-                <select  name="sort" id="sort">
-                    <option value="filter 1">Option 1</option>
-                    <option value="filter 1">Option 1</option>
-                    <option value="filter 1">Option 1</option>
-                </select>
-                <button class="add-restaurant">+</button>
+                <div class="search-box">
+                    <input type="text" id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <button class="add-item">+</button>
             </div>
-            <div class="restaurant-list">
-                <div class="restaurant">
-                    <div class="restaurant-img"></div>
-                    <div class="res-name">
-                        <h3 class="restaurant-name">Njabulo's Store</h3>
-                        <p class="address">56 Richmond Avenue</p>
+            <div class="menu-list">
+                <div class="item">
+                    <div class="item-info">
+                        <h3 class="item-name">Njabulo's Store</h3>
+                        <p class="description">56 Richmond Avenue</p>
                     </div>
-                    <p class="orders">48</p>
-                    <p class="sales">R14, 983</p>
-                    <p class="operating-hours">Open</p>
+                    <p class="price">R48</p>
                 </div>
             </div>
 

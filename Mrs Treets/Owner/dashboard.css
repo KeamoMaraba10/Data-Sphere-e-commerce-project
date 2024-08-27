@@ -1,3 +1,8 @@
+body{
+    background-color: var(--white);
+    background-image: none;
+}
+
 .side-bar-nav{
     position: fixed;
     top: 0;
@@ -119,7 +124,7 @@ main{
 
 .content{
     padding: 4rem 5rem;
-
+    background-color: transparent;
 }
 
 .graphs{
@@ -154,3 +159,131 @@ main{
     border: 1px solid var(--lightBrown);
 
 }
+
+#sort{
+    width: 8rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--yellow);
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: .2rem;
+    margin: 2rem 0;  
+}
+
+.restaurant-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurant{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    background-color: #3e3e3e;
+    justify-content: space-evenly;
+}
+
+.restaurant-img{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-restaurant{
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #fff;
+    background-color: #3e3e3e;
+    border: none;
+    border-radius: 50%;
+    margin-left: 5rem;
+}
+
+
+/* Menu */
+.restaurant-select{
+    width: 23rem;
+    height: 6rem;
+    font-size: 3rem;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.search-box{
+    background-color: #fff;
+    width: 65rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+#search{
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: var(--lightBrown);
+}
+
+.fa-magnifying-glass{
+    font-size: 1rem;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.item{
+    display: flex;
+    border-radius: .5rem;
+    align-items: flex-start;
+    width: 100%;
+    height: 10rem;
+    padding: 2rem;
+    background-color: #fff;
+    margin-top: 4rem;
+    /* justify-content: space-between; */
+}
+
+.item-info{
+    margin-right: 10rem;
+}
+
+.add-item{
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #fff;
+    background-color: #3e3e3e;
+    border: none;
+    border-radius: 50%;
+    margin-left: 5rem;
+}
+
+.item-name{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.price{
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
