@@ -1,0 +1,156 @@
+.side-bar-nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    width: 6rem;
+    background-color: var(--green);
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-right: 3rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-out;
+}
+
+.side-pill-list{
+    list-style: none;
+}
+
+.side-bar-nav a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 10rem;
+    justify-content: space-between;
+}
+
+.side-bar-nav span{
+    opacity: 0;
+    color: var(--lightBrown);
+    
+    
+}
+
+.pill-list-item{
+    margin: 2rem 0;
+    display: flex;
+    
+}
+
+.fa-solid{
+    color: var(--lightBrown);
+    font-size: 2rem;
+
+}
+
+
+.fa-gear{
+    margin-top: auto;
+}
+
+.side-bar-nav:hover{
+    width: 12rem;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+.side-bar-nav:hover span{
+    opacity: 1;
+    transition: opacity 0.9s ease-in-out;
+}
+
+.pill-list-item:hover span,
+.pill-list-item:hover .fa-solid{
+    color: var(--yellow);
+    transition: .2s ease-in-out;
+}
+
+/* Key Frames */
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+/* Main styling */
+
+main{
+    margin-left: 6rem;
+}
+
+.navbar{
+    background-color: #fff;
+}
+
+.sign-in-btn{
+    width: 11.13rem; 
+    height: 2.00rem; 
+    border-radius: 0.50rem;  
+    padding: 0.50rem;
+    color: #fff;
+    border: none;
+    background-color: var(--green);
+    transition: 0.2s ease-in;
+}
+
+.sign-in-btn:hover{
+    cursor: pointer;
+    background-color: #fab640;
+}
+
+.content{
+    padding: 4rem 5rem;
+
+}
+
+.graphs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.revenue,.popular-foods{
+    width: 33.06rem; 
+    height: 19.31rem; 
+    border-radius: 0.50rem; 
+    border-width: 0.06rem; 
+    padding-top: 1.50rem; 
+    padding-bottom: 0.50rem; 
+    padding-left: 0.50rem; 
+    padding-right: 0.50rem;
+    background-color: #fff;
+    border: 1px solid var(--lightBrown);
+}
+
+.order-list{
+    width: 100%; 
+    height: 50rem; 
+    border-radius: 0.50rem; 
+    border-width: 0.06rem; 
+    padding-top: 1.50rem; 
+    padding-bottom: 0.50rem; 
+    padding-left: 0.50rem; 
+    padding-right: 0.50rem;
+    background-color: #fff;
+    border: 1px solid var(--lightBrown);
+
+}
