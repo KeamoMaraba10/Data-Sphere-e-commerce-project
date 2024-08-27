@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Mrs Treets/Customer/master.css">
+    <link rel="stylesheet" href="/Mrs Treets/Owner/business-registration.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img class="logo-img" src="/Mrs Treets/Customer/Aunt J.svg" alt="" srcset="">
+            <h2 class="logo-txt">MrS Treets</h2>
+        </div>
+        <div class="reg-btns">
+            <button class="sign-in-btn">Sign in</button>
+        </div>
+    </nav>
+    <main class="content">
+        <div class="form-content">
+            <div class="form">
+                <h2 class="form-name">Register Your Business</h2>
+                <form action="">
+                    <div class="double-input">
+                        <div class="input-field">
+                            <label for="firstName">First Name</label>
+                            <input type="text" name="firstName" id="firstName" placeholder="John" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="double-input">
+                        <div class="input-field">
+                            <label for="phone">Number</label>
+                            <input type="tel" name="phone" id="phone" placeholder="087 683 7322" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email"placeholder="john@doe.com" required>
+                        </div>
+                    </div>
+                    <div class="double-input">
+                        <div class="input-field">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" name="dob" id="dob" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="gender">Gender</label>
+                            <input type="text" name="gender" id="gender" placeholder="Gender" required>
+                        </div>
+                    </div>
+                    <div class="input-field single">
+                        <label for="address1">Address Line 1</label>
+                        <input type="text" name="address1" id="address1" placeholder="Eg. 145 Star Street" required>
+                    </div>
+                    <div class="input-field single">
+                        <label for="address2">Address Line 2</label>
+                        <input type="text" name="address2" id="address2" placeholder="Eg. Vosloorus Ext 31" required>
+                    </div>
+                    <div class="double-input">
+                        <div class="input-field">
+                            <label for="suburb">Suburb</label>
+                            <input type="text" name="suburb" id="suburb" placeholder="Boksburg" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city" placeholder="Johannesburg" required>
+                        </div>
+                    </div>
+                    <div class="double-input">
+                        <div class="input-field">
+                            <label for="province">Province</label>
+                            <select name="province" id="province">
+                                <option value="Gauteng">Gauteng</option>
+                                <option value="Free State">Free State</option>
+                                <option value="Limpopo">Limpopo</option>
+                                <option value="Kwa-Zulu Natal">Kwa-Zulu Natal</option>
+                                <option value="Eastern Cape">Eastern Cape</option>
+                                <option value="Western Cape">Western Cape</option>
+                                <option value="North West">North West</option>
+                                <option value="Mpumalanga">Mpumalanga</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="postal">Postal Code</label>
+                            <input type="text" name="postal" id="postal" placeholder="1467" required>
+                        </div>
+                    </div>
+                    <div class="input-field single">
+                        <label for="business">Business Name</label>
+                        <input type="text" name="business" id="business" required>
+                    </div>
+                    <button class="next-btn" type="button">Register</button>
+                </form>
+            </div>
+        </div>
+        <div class="copywrite">
+            <h1>Let's turn your culinary passion into profit</h1>
+        <p>Register your business now and start connecting with hungry customers eager to taste your specialties</p>
+        </div>
+    </main>
+    <!-- End of Page -->
+</body>
+</html>
