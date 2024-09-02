@@ -40,17 +40,7 @@
             <p class="cart-subtotal-p">Subtotal: R290.80</p>
         </div>
         <div class="cart-list">
-                <div class="cart-item">
-                    <h4 class="cart-item-name">Chips & Russian <img src="Trash 2.svg" alt="" class="delete"></h4>
-                    
-                    <p class="price">R60</p>
-                    <div class="quantity-buttons">
-                        <button class="cart-subtract">-</button>
-                        <p class="cart-number">1</p>
-                        <button class="cart-add">+</button>
-                    </div>
-                    
-                </div>
+                
             </div>
         <h4 class="cart-quantity-h4">Subtotal <span class="subtotal-price-h4">R290.80</span></h4>
         <button class="checkout">Go to checkout</button>
@@ -117,35 +107,35 @@
                             <button class="btn-add-item">+</button>
                         </div>
                         <div class="item">
-                            <h4 class="item-name">Combo 1</h4>
+                            <h4 class="item-name">Wors and Chips</h4>
                             <p class="item-description"></p>
-                            <p class="price">R60</p>
+                            <p class="price">R80</p>
                             <button class="btn-add-item">+</button>
                         </div>
                         <div class="item">
-                            <h4 class="item-name">Chips & Russian</h4>
-                            <p class="item-description"></p>
-                            <p class="price">R60</p>
+                            <h4 class="item-name">Combo 1</h4>
+                            <p class="item-description">Wors Roll, Medium Chips and Buddy Coke</p>
+                            <p class="price">R150</p>
                             <button class="btn-add-item">+</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="item">
-                            <h4 class="item-name">Chips & Russian</h4>
-                            <p class="item-description"></p>
-                            <p class="price">R60</p>
+                            <h4 class="item-name">Grill Plater</h4>
+                            <p class="item-description">Steak,Wors,Chicken and a side of your choice</p>
+                            <p class="price">R200</p>
                             <button class="btn-add-item">+</button>
                         </div>
                         <div class="item">
-                            <h4 class="item-name">Chips & Russian</h4>
-                            <p class="item-description"></p>
-                            <p class="price">R60</p>
+                            <h4 class="item-name">Chips</h4>
+                            <p class="item-description">Medium</p>
+                            <p class="price">R40</p>
                             <button class="btn-add-item">+</button>
                         </div>
                         <div class="item">
-                            <h4 class="item-name">Chips & Russian</h4>
-                            <p class="item-description"></p>
-                            <p class="price">R60</p>
+                            <h4 class="item-name">Family meal</h4>
+                            <p class="item-description">4x Wors Roll, Large Chips and 2L drink</p>
+                            <p class="price">240</p>
                             <button class="btn-add-item">+</button>
                         </div>
                     </div>
@@ -196,6 +186,8 @@
         var modalView = document.querySelector(".modal");
         var addToCartItemName = document.getElementById("item-name");
         var addToCartItemDescription = document.getElementById("item-description");
+        var btnAdd = document.querySelector(".btn-add-to-order");
+        
 
         //elements inside the add to cart
         var subtract = document.getElementsByClassName("subtract")[0];
@@ -203,12 +195,73 @@
         var add = document.getElementsByClassName("add")[0];
         var notes = document.getElementById("notes");
         var all = document.querySelector("*");
+        var cart = document.querySelector(".cart-list");
+        var value;
+        var num = 0;
 
+        function subtracting(){
+            var value = number.innerText;
+            value--
+            console.log(value)
+            
+            if(value <= 0){
+                number.innerHTML = 1;
+                num = 1
+            }else{
+                number.innerHTML = value;
+                num = Number(value)
+            }
+        }
+
+        function adding(){
+            var value = number.innerText;
+            value++
+            
+            console.log(value);
+            if(value <= 0){
+                number.innerHTML = 1;
+                num = 1
+                
+            }else{
+                number.innerHTML = value;
+                num = Number(value)
+            }
+        }
+
+        subtract.addEventListener("click", ()=>{
+            subtracting();
+        })
+
+        add.addEventListener("click", ()=>{
+            adding();
+        })
+
+        btnAdd.addEventListener("click", ()=>{
+            console.log(number);
+            var item = document.createElement('div');
+            item.classList.add("cart-item")
+            item.innerHTML = `<h4 class="cart-item-name">` + itemName + `<img src="Trash 2.svg" alt="" class="delete"></h4>
+                    
+                    <p class="price">` + price + `</p>
+                    <div class="quantity-buttons">
+                        <button class="cart-subtract">-</button>
+                        <p class="cart-number">` + num + `</p>
+                        <button class="cart-add">+</button>
+                    </div>`
+            cart.appendChild(item);
+            modalView.classList.remove("modal-active")
+            all.style.overflow = "initial"
+        })
+
+        var price;
 
         var pressedBtn;
+
+
         addBtn = document.querySelectorAll(".btn-add-item");
         addBtn.forEach(element =>{
          element.addEventListener("click", function getInfo(){
+            price = this.previousElementSibling.innerText
             itemDescription = this.previousElementSibling.previousElementSibling.innerText
             itemName = this.previousElementSibling.previousElementSibling.previousElementSibling.innerText
             addToCartItemName.innerText = itemName
@@ -267,6 +320,9 @@
         closeProfile.addEventListener("click", ()=>{
             profileNav.classList.remove("active-profile")
         })
+
+
+
 
     </script>
 

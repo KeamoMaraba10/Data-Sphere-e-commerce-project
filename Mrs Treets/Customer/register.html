@@ -20,8 +20,8 @@
                 <h2 class="form-name">Register</h2>
                 <form action=""  class="show">
                     <div class="input-field">
-                        <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" id="firstName" placeholder="John Doe" required>
+                        <label for="fullName">First Name</label>
+                        <input type="text" name="fullName" id="fullName" placeholder="John Doe" required>
                     </div>
                     <div class="input-field">
                         <label for="userName">User Name</label>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="input-field">
                         <label for="number">Number</label>
-                        <input type="tel" name="num" id="number"placeholder="0784541678" pattern="[0]{1}[0-9]{9}" required>
+                        <input type="tel" name="number" id="number"placeholder="0784541678" pattern="[0]{1}[0-9]{9}" required>
                     </div>
                     <div class="input-field">
                         <label for="mail">Email</label>
@@ -57,26 +57,25 @@
     <!-- End of Page -->
     <script>
         
-        // function next(){
+        var existing = "njabulokumalo@gmail.com"
+        
+        
+      var nextbtn = document.querySelector(".next-btn");
+      nextbtn.addEventListener("click", ()=>{
+        var fullName = document.getElementById("fullName").value;
+        var userName = document.getElementById("userName").value;
+        var dob = document.getElementById("dob").value;
+        var number = document.getElementById("number").value;
+        var passowrd = document.getElementById("password").value;
+        var email = document.getElementById("mail").value;
 
-        //     var entirename = document.getElementById("fullname").value;
-        //     var phone = document.getElementById("number").value;
-        //     var form1 = document.getElementsByClassName("show")[0];
+        if(email == existing ){
+            alert("Email already exists")
+        }else{
+            window.location.href = "stateless_catalogue.html";
+        }
+      })
             
-        //     if(entirename && phone){
-        //         var form2 = form1.nextElementSibling;
-        //         form2.classList.add("show")
-        //         form1.classList.remove("show");
-        //     }else
-        //     {
-        //         console.log("one of the tings are wrong")
-        //     }
-        // }
-
-        // function works(){
-        //     console.log("submit works")
-        // }
-
 
     </script>
 </body>

@@ -7,7 +7,7 @@ body{
 }
 
 .navbar{
-    
+    justify-content: space-between;
 }
 
 .sign-in-btn{

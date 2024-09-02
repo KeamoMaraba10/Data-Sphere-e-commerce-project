@@ -138,14 +138,13 @@ main, .navbar{
 
 .inventory{
     padding: 0 7rem;
-}
-
-.restaurants-container{
     margin-top: 5rem;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 2rem;
 }
+
+
 
 .restaurant{
     position: relative;

@@ -59,6 +59,7 @@ main, .navbar{
     justify-content: space-around;
     width: 27.50rem;
     height: 11rem;
+    margin: 0.5rem 0;
     background-color: #fff;
     margin-right: 3.438rem;
     padding: 1.5rem;
