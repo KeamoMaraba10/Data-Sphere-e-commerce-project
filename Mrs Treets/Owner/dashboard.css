@@ -129,11 +129,22 @@ main{
     background-color: transparent;
 }
 
+.greeting{
+    color: var(--lightBrown);
+}
+
+.greeting-p{
+    margin-top: 1rem;
+    color: var(--lightBrown);
+}
+
 .graphs{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+
 
 .revenue,.popular-foods{
     width: 33.06rem; 
@@ -147,6 +158,15 @@ main{
     background-color: #fff;
     border: 1px solid var(--lightBrown);
 }
+
+
+/* chart css */
+
+.chart-container {
+    width: 40%;
+}
+
+/* list */
 
 .order-list{
     width: 100%; 

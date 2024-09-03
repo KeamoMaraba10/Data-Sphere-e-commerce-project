@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/Customer/master.css">
-    <link rel="stylesheet" href="/Owner/dashboard.css">
+    <link rel="stylesheet" href="/Mrs Treets/Customer/master.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <div class="side-bar-nav">
@@ -27,7 +27,7 @@
     <main>
         <nav class="navbar">
             <div class="logo">
-                <img class="logo-img" src="/Customer/Aunt J.svg" alt="" srcset="">
+                <img class="logo-img" src="/Mrs Treets/Customer/Aunt J.svg" alt="" srcset="">
                 <h2 class="logo-txt">MrS Treets</h2>
             </div>
             <div class="reg-btns">
@@ -36,17 +36,80 @@
         </nav>
         <div class="content">
             <h1 class="greeting">Hello Mista</h1>
-            <p>Account Overview</p>
+            <p class="greeting-p">Account Overview</p>
             <div class="stats">
                 <div class="graphs">
                     <div class="revenue"></div>
-                    <div class="popular-foods"></div>
+                    <div class="popular-foods">
+                        <div class="chart-container">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
                 </div>
                 <div class="order-list"></div>
             </div>
 
         </div>
     </main>
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Pie Chart Data
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        const pieChart = new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
+                datasets: [{
+                    data: [12, 19, 3, 5, 2],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    // title: {
+                    //     display: true,
+                    //     text: 'Pie Chart Example'
+                    // }
+                }
+            }
+        });
+
+        // Bar Chart Data
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        const barChart = new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Monthly Sales',
+                    data: [65, 59, 80, 81, 56, 55],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Bar Chart Example'
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
