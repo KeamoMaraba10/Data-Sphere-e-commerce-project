@@ -214,26 +214,30 @@ main{
 
 main{
     color: var(--lightBrown);
+    /* opacity: 0.4; */
 }
 
 .restaurant-header{
     display: flex;
     margin-top: 3rem;
-    flex-direction: column;
 }
 
+.restaurant-info{
+    margin-left: 3.25rem;
+}
 
 .restaurant-image{
-    height: 20rem;
-    background-image: url("IMG_9323.jpg");
+    width: 37.50rem;
+    height: 35rem;
+/* background-image: url("IMG_9323.jpg"); */
     background-size: cover;
     border-radius: 1rem;
-    margin-bottom: 2rem;
 }
 
 .restaurant-description{
     font-size: 1rem;
     margin-top: 2.375rem;
+    width: 38.75rem;
     font-weight: 300;
 }
 
@@ -267,20 +271,19 @@ main{
 .menu-items{
     padding-top: 3rem;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto auto;
     row-gap: 2rem;
 }
 
 
 
 .item{
-    /* width: 27.50rem; */
-    /* width: 100%; */
+    width: 27.50rem;
     height: 12.94rem;
     background-color: #fff;
     margin-right: 3.438rem;
     padding: 1.5rem;
-    padding-left: 2rem;
+    padding-left: 5rem;
     border-radius: 0.5rem;
     filter: drop-shadow(0px 4px 4px #0000004c);
 }
@@ -294,7 +297,7 @@ main{
 
 
 .item-description{
-    width: 15rem;
+    width: 21.00rem;
     height: 2rem;
     margin-bottom: 1rem;
     margin-top: .5rem;
@@ -335,7 +338,7 @@ main{
 .add-to-cart{
     /* display: none; */
     border: 1px solid var(--yellow);
-    width: 25rem;
+    width: 37.50rem;
     height: 16.19rem;
     background-color: #fff;
     border-radius: .5rem;
@@ -432,51 +435,3 @@ main{
     padding-left: 0.75rem; 
     padding-right: 0.75rem;
 }
-
-@media screen and (min-width:768px) {
-    .restaurant-image{
-        height: 35rem;
-    }
-
-    .add-to-cart{
-        width: 37.50rem;
-    }
-
-    
-}
-
-@media screen and (min-width:1024px) {
-    
-    .restaurant-header{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .restaurant-image{
-        width: 50%;
-    }
-
-    .restaurant-info{
-        width: 45%;
-    }
-    
-    .item{
-        width: 25.50rem;
-    }
-
-    .menu-items{
-        padding-top: 3rem;
-        display: grid;
-        grid-template-columns: auto auto;
-        row-gap: 2rem;
-    }
-}
-
-@media screen and (min-width:1440px) {
-
-    .menu-items{
-        grid-template-columns: auto auto auto;
-    }
-    
-}
-

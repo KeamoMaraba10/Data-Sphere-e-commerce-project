@@ -17,8 +17,9 @@
 
 .navbar{
     display: flex;
-    /* padding: 0.5rem 1rem; */
     align-items: center;
+    padding: 1.188rem 2.2rem;
+    justify-content: space-between;
 }
 
 .logo{
@@ -30,14 +31,17 @@ body{
     background-color: var(--white);
 }
 
+
 .logo-img{
-    width: 3.75rem;
+    width: 3rem;
 }
+
+
 
 .logo-txt{
     font-family: var(--logoFont);
     color: var(--yellow);
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .nav-pill-list{
@@ -52,61 +56,123 @@ body{
     margin: 0 .5rem;
 }
 
+.nav-pill-list li{
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
+}
+
 footer{
     margin-top: 10rem;
-    background-color: var(--green);
-    color: var(--lightBrown);
+    background-color: var(--lightBrown);
+    color: var(--white);
     padding: 2rem;
 }
 
 footer a{
-    color: var(--lightBrown);
+    color: var(--white);
     text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-.links{
-    display: flex;
+.fa-phone{
+    margin-right: .5rem;
 }
+
+
+
 
 .footer-logo{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .box1-link{
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
-.socials{
-    display: flex;
-    justify-content: space-between;
+
+.social-links{
+    margin-right: 2rem;
 }
 
 .box2{
     display: flex;
     flex-direction: column;
-    margin-left: 10rem;
 }
 
-.box2 a{
-    margin: .7rem 0;
+
+.email2{
+    display: none;
 }
 
 .email{
     display: flex;
     flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.email label{
+    color: var(--yellow);
+    font-weight: 500;
 }
 
 #email{
-    width: 45rem;
     height: 2rem;
     margin-top: .5rem;
+    padding: 1rem;
 }
 
 .contact-support{
     margin-top: 2rem;
-    width: 25rem;
+    width: 10rem;
     height: 1.8rem;
     background-color: var(--yellow);
     color: #fff;
+    border-radius: .5rem;
     border: none;
+}
+
+@media screen and (min-width: 524px) {
+    .links{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 3rem;
+    }
+
+    .box2{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .logo-img{
+        width: 3.75rem;
+    }
+    
+    .logo-txt{
+        font-size: 2rem;
+    }
+
+    .links{
+        justify-content: space-between;
+    }
+
+    
+    
+    .contact-support{
+        width: 25rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .email{
+        display: none;
+    }
+
+    .email2{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5rem;
+    }
 }

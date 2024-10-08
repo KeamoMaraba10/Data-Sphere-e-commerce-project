@@ -10,23 +10,19 @@ h1{
 
 .tabs{
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: space-evenly;
-    flex-direction: column;
     margin-top: 3.5rem;
 }
 
 .tab-links{
-    margin-top: 1rem;
     display: flex;
-    /* flex-direction: column; */
-    gap: .3rem;
-    /* width: 100%; */
+    gap: 2.1rem;
 }
 
 
 .profile-picture{
-    width: 100%; 
+    width: 18.75rem; 
     height: 21.25rem; 
     border-radius: 0.50rem; 
     border-width: none; 
@@ -56,6 +52,7 @@ h1{
 form{
     margin-top: 1rem;
 }
+
 form button:hover{
     cursor: pointer;
 }
@@ -75,11 +72,11 @@ form button{
 
 .tab-link{
     background-color: #fff;
-    /* width: 100%;  */
-    /* height: 5rem;  */
+    width: 10.00rem; 
+    height: 18.75rem; 
     border-radius: 0.50rem; 
     border: none; 
-    padding: 1.30rem;
+    padding: 1.50rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -97,8 +94,8 @@ form button{
 }
 
 .icon{
-    width: 2rem; 
-    height: 2rem;
+    width: 6.25rem; 
+    height: 6.25rem;
     border-radius: 50%;
     border: none;
     background-color: #fff;
@@ -111,7 +108,6 @@ form button{
 .tab-name{
     font-weight: 600;
     color: var(--lightBrown);
-    display: none;
 }
 
 .profile-details{
@@ -126,14 +122,9 @@ form button{
     width: 82%;
 }
 
-.icon img{
-    width: 1.4rem;
-}
-
 .details{
     display: flex;
-    flex-direction: column;
-    /* width: 82%; */
+    width: 82%;
     justify-content: space-between;
     margin-top: 2.5rem;
 }
@@ -168,90 +159,4 @@ form button{
     padding: 0.75rem;
     background-color: var(--yellow);
     color: #fff;
-}
-
-
-@media screen and (min-width:768px) {
-    
-    /* .tabs{
-        align-items: end;
-        flex-direction: row;
-    }
-    
-    .profile-picture{
-        width: 14rem;
-    } */
-
-    .tab-link{
-        width: 10rem;
-        height: 10rem;
-    }
-
-    .icon{
-        width: 4rem;
-        height: 4rem;
-    }
-
-    .details{
-        width: 82%;
-    }
-
-    .input{
-        width: 100%;
-    }
-}
-
-@media screen and (min-width:1024px) {
-    .tabs{
-        align-items: end;
-        flex-direction: row;
-    }
-
-    .tab-links{
-        gap: 2.1rem;
-    }
-
-    .profile-picture{
-        width: 18.75rem; 
-    }
-
-    .tab-link{
-        width: 8.00rem; 
-        height: 18.75rem; 
-    }
-
-    .icon{
-        width: 6.25rem; 
-        height: 6.25rem;
-    }
-
-    .icon img{
-        width: initial;
-    }
-
-    .tab-name{
-        display: initial;
-    }
-
-    .details{
-        flex-direction: row;
-        width: 82%;
-    }
-
-    .input{
-        width: 12rem;
-    }
-
-    
-}
-
-@media screen and (min-width:1280px) {
-
-    .input{
-        width: 15rem;
-    }
-
-    .tab-link{
-        width: 10.00rem;
-    }
 }

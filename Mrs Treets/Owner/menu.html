@@ -11,18 +11,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/Customer/master.css">
-    <link rel="stylesheet" href="dashboard.css">
+    <!-- <link rel="stylesheet" href="dashboard.css"> -->
+     <link rel="stylesheet" href="business.css">
 </head>
 <body>
     <div class="side-bar-nav">
         <ul class="side-pill-list">
-            <li class="pill-list-item"><a href="#"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
-            <li class="pill-list-item"><a href="#"><i class="fa-solid fa-store"></i><span>Stores</span></a></li>
-            <li class="pill-list-item"><a href="#"><i class="fa-solid fa-utensils"></i><span>Menu</span></a></li>
-            <li class="pill-list-item"><a href="#"><i class="fa-solid fa-receipt"></i><span>Orders</span></a></li>
+            <li class="pill-list-item"><a href="#"><i class="fa-solid bi bi-house"></i><span>Home</span></a></li>
+            <li class="pill-list-item"><a href="#"><i class="fa-solid bi bi-shop-window"></i><span>Stores</span></a></li>
+            <li class="pill-list-item"><a href="#"><i class="fa-solid bi bi-cart"></i><span>Order</span></a></li>
+            <li class="pill-list-item"><a href="#"><i class="fa-solid bi bi-basket"></i><span>Menu</span></a></li>
         </ul>
-        <i class="fa-solid fa-gear"></i>
+        <i class="fa-solid bi bi-gear"></i>
+    </div>
+    <div class="mobile-nav">
+        <ul class="nav-list">
+            <li class="nav-list-item"><a href="#"><i class="fa-solid bi bi-house"></i><span>Home</span></a></li>
+            <li class="nav-list-item"><a href="#"><i class="fa-solid bi bi-shop-window"></i><span>Stores</span></a></li>
+            <li class="nav-list-item"><a href="#"><i class="fa-solid bi bi-basket"></i><span>Menu</span></a></li>
+            <li class="nav-list-item"><a href="#"><i class="fa-solid bi bi-cart"></i><span>Orders</span></a></li>
+            <li class="nav-list-item"><a href="#"><i class="fa-solid bi bi-gear"></i><span>Settings</span></a></li>
+        </ul>
     </div>
     <main>
         <nav class="navbar">
@@ -30,9 +42,8 @@
                 <img class="logo-img" src="/Customer/Aunt J.svg" alt="" srcset="">
                 <h2 class="logo-txt">MrS Treets</h2>
             </div>
-            <div class="reg-btns">
-                <button class="sign-in-btn">Sign out</button>
-            </div>
+            <i class="bi bi-bell"></i>
+            <i class="bi bi-person-circle"></i>
         </nav>
         <div class="content">
             <select name="restaurant" id="restaurant" class="restaurant-select">
@@ -43,16 +54,37 @@
                     <input type="text" id="search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <button class="add-item" onclick="window.location.href='add_restaurant.html'">+</button>
+                <button class="add-item"><i class="bi bi-plus"></i> Add a product</button>
             </div>
             <div class="menu-list">
-                <div class="item">
-                    <div class="item-info">
-                        <h3 class="item-name">Njabulo's Store</h3>
+                <a href="#" class="item">
+                        <h3 class="item-name">Muffin</h3>
                         <p class="description">56 Richmond Avenue</p>
-                    </div>
                     <p class="price">R48</p>
-                </div>
+                </a>
+                <a href="#" class="item">
+                        <h3 class="item-name">Muffin</h3>
+                        <p class="description">56 Richmond Avenue</p>
+                    <p class="price">R48</p>
+                </a>
+                <a href="#" class="item">
+                        <h3 class="item-name">Muffin</h3>
+                        <p class="description">56 Richmond Avenue</p>
+                    <p class="price">R48</p>
+                </a>
+                <a href="#" class="item">
+                        <h3 class="item-name">Muffin</h3>
+                        <p class="description">56 Richmond Avenue</p>
+                    <p class="price">R48</p>
+                </a>
+                <a href="#" class="item">
+                        <h3 class="item-name">Muffin</h3>
+                        <p class="description">56 Richmond Avenue</p>
+                    <p class="price">R48</p>
+                </a>
+                
+                
+
             </div>
 
         </div>

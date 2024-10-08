@@ -1,11 +1,11 @@
 main, .navbar{
-    padding: 1.188rem 3.188rem;
+    padding: 1.188rem 2.3rem;
 }
 
 
-.navbar{
-    justify-content: space-between;
-}
+
+
+
 
 .sign-in-btn, .register-btn{
     width: 4.5rem;
@@ -31,17 +31,17 @@ main, .navbar{
     display: flex;
     color: var(--lightBrown);
     padding: 5rem 0;
+    flex-direction: column;
 }
 
 .search-box-1, .search-box-2{
     display: flex;
     align-items: center;
-    width: 34.38rem;
     height: 3.75rem;
     background-color: #fff;
-    margin-right: 12rem;
     padding: 1.5rem;
     border-radius: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .search-boxes input{
@@ -56,8 +56,13 @@ main, .navbar{
 
 .filters{
     display: flex;
-    margin-left: 3.188rem;
-    /* margin-right: 3.188rem; */
+    flex-direction: column;
+    align-items: start;
+}
+
+.tab-filters{
+    display: flex;
+    margin-bottom: 2rem;
 }
 
 .filter-btn{
@@ -96,7 +101,6 @@ main, .navbar{
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-left: 6rem;
 }
 
 .dropdown-content {
@@ -137,10 +141,10 @@ main, .navbar{
 }
 
 .inventory{
-    padding: 0 7rem;
+    margin: 0 auto;
     margin-top: 5rem;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto;
     gap: 2rem;
 }
 
@@ -202,7 +206,7 @@ transform: scale(1.1);
     text-transform: uppercase;
     font-weight: 600;
     margin: 1rem 0;
-
+    color: var(--yellow);
 }
 .menu{
     width: 80%;
@@ -226,10 +230,56 @@ transform: scale(1.1);
     top: 0;
     padding: .4rem .6rem;
     color: var(--yellow);
-    
     font-size: .9rem;
     font-size: .9rem;
     display: flex;
     align-items: center;
     gap: .5rem;
+}
+
+
+@media screen and (min-width:768px) {
+
+    .search-boxes{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .filters{
+        flex-direction: row;
+    }
+
+    .inventory{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width:1240px) {
+
+    .search-box-1, .search-box-2{
+        width: 34.38rem;
+    }
+
+    .inventory{
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        column-gap: 6rem;
+    }
+
+    .box2{
+        margin-left: 10rem;
+    }
+    
+    .box2 a{
+        margin: .7rem 0;
+    }
+    
+    #email{
+        width: 45rem;
+    }
+    
+    .contact-support{
+        width: 25rem;
+    }
+
 }
